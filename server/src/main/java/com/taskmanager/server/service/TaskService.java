@@ -6,9 +6,9 @@ import java.util.Optional;
 
 public interface TaskService {
     Task createTask(Task task);
-    Optional<Task> getTaskById(long id);
+    Optional<Task> getTaskById(Long id);
     List<Task> getAllTasks();
-    Task updateTask(Task task);
-    void deleteTask(long id);
+    Task updateTask(Long id, Task task);
+    void deleteTask(Long id);
     void deleteAllTasks();
 }
