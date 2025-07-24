@@ -4,6 +4,7 @@ import com.taskmanager.server.model.Task;
 import com.taskmanager.server.model.User;
 import com.taskmanager.server.repository.TaskRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -52,6 +53,7 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    @Transactional
     public void deleteAllTasks(User user) {
         repo.deleteByUser(user);
     }
